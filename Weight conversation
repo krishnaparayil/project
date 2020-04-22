@@ -1,0 +1,64 @@
+#include<stdio.h>
+void main()
+{
+  int NUM;
+  float WEIGHT,GRAMS;
+  clrscr();
+  printf("SELECT MEASURING MASS");
+  printf("\n 1. MILLIGRAM\n");
+  printf("\n 2. CENTIGRAM\n");
+  printf("\n 3. DECIGRAM\n");
+  printf("\n 4. KILOGRAM\n");
+  printf("\n 5. MEGAGRAM(TON)\n");
+  printf("\n 6. OUNCE\n");
+  printf("\n 7. POUND\n");
+  printf("ENTER CHOICE HERE :");
+  scanf("%d",&NUM);
+  switch(NUM)
+  {
+    case 1 :    printf("\n SELETED MILLIGRAMS TO GRAMS\n");
+        break;
+    case 2 :    printf("\n SELETED CENTIGRAMS TO GRAMS\n");
+        break;
+    case 3 :    printf("\n SELETED DECIGRAMS TO GRAMS\n");
+        break;
+    case 4 :    printf("\n SELETED KILOGRAMS TO GRAMS\n");
+        break;
+    case 5 :    printf("\n SELETED MEGAGRAMS(TONS) TO GRAMS\n");
+        break;
+    case 6 :    printf("\n SELETED OUNCES TO GRAMS\n");
+        break;
+    case 7 :    printf("\n SELETED POUNDS TO GRAMS\n");
+        break;
+    default :   printf("YOU HAVE ENTERED WRONG CHOICE !!!");
+        goto QUIT;
+  }
+  printf("ENTER WEIGHT HERE :");
+  scanf("%f",&WEIGHT);
+  switch(NUM)
+  {
+    case 1 :    GRAMS=WEIGHT/1000;
+        printf("\n %.2f MILLIGRAMS IS %.2f GRAMS\n",WEIGHT,GRAMS);
+        break;
+    case 2 :    GRAMS=WEIGHT/100;
+        printf("\n %.4f CENTIGRAMS IS %.4f GRAMS\n",WEIGHT,GRAMS);
+        break;
+    case 3 :    GRAMS=WEIGHT/10;
+        printf("\n %.4f DECIGRAMS IS %.4f GRAMS\n",WEIGHT,GRAMS);
+        break;
+    case 4 :    GRAMS=WEIGHT*1000;
+        printf("\n %.4f KILOGRAMS IS %.4f GRAMS\n",WEIGHT,GRAMS);
+        break;
+    case 5 :    GRAMS=WEIGHT*1000000;
+        printf("\n %.4f TONS IS %.4f GRAMS\n",WEIGHT,GRAMS);
+        break;
+    case 6 :    GRAMS=WEIGHT*2835/100;
+        printf("\n %.4f OUNCES IS %.4f GRAMS\n",WEIGHT,GRAMS);
+        break;
+    case 7 :    GRAMS=WEIGHT*45359/100;
+        printf("\n %.4f POUNDS IS %.4f GRAMS\n",WEIGHT,GRAMS);
+        break;
+  }
+  QUIT:
+    getch();
+}
